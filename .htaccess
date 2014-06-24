@@ -1,0 +1,12 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteBase /app_solution/
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /app_solution/index.php/$1 [L]
+    ErrorDocument 404 /app_solution/index.php
+
+<ifModule mod_headers.c>
+    Header set Connection keep-alive
+</ifModule>
+
