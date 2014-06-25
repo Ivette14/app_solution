@@ -31,8 +31,9 @@ class Welcome extends CI_Controller {
 	public function index()
 	{
 		$this->load->view('header');	
-		$this->load->view('foorter');
 			$this->load->view('form/frm_new_caso');
+		$this->load->view('foorter');
+
 		
 	}
 }
