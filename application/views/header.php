@@ -5,15 +5,16 @@
 		<meta name="description" content="description">
 		<meta name="author" content="DevOOPS">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
+			 <base href="<?php echo base_url();  ?>">
 		<link href="<?php echo base_url().'seteo/plugins/bootstrap/bootstrap.css'; ?>" rel="stylesheet">
-		<link href="<?php echo base_url().'plugins/jquery-ui/jquery-ui.min.css'; ?>" rel="stylesheet">
+		<link href="<?php echo base_url().'seteo/plugins/jquery-ui/jquery-ui.min.css'; ?>" rel="stylesheet">
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		<link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
-		<link href="<?php echo base_url().'plugins/fancybox/jquery.fancybox.css'; ?>" rel="stylesheet">
-		<link href="<?php echo base_url().'plugins/fullcalendar/fullcalendar.css'; ?>" rel="stylesheet">
-		<link href="<?php echo base_url().'plugins/xcharts/xcharts.min.css'; ?>" rel="stylesheet">
-		<link href="<?php echo base_url().'plugins/select2/select2.css'; ?>" rel="stylesheet">
-		<link href="<?php echo base_url().'css/style.css" rel="stylesheet'; ?>">
+		<link href="<?php echo base_url().'seteo/plugins/fancybox/jquery.fancybox.css'; ?>" rel="stylesheet">
+		<link href="<?php echo base_url().'seteo/plugins/fullcalendar/fullcalendar.css'; ?>" rel="stylesheet">
+		<link href="<?php echo base_url().'seteo/plugins/xcharts/xcharts.min.css'; ?>" rel="stylesheet">
+		<link href="<?php echo base_url().'seteo/plugins/select2/select2.css'; ?>" rel="stylesheet">
+		<link href="<?php echo base_url().'seteo/css/style.css' ; ?>" rel="stylesheet">
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
@@ -140,48 +141,3 @@
 </header>
 <!--End Header-->
 <!--Start Container-->
-<div id="main" class="container-fluid">
-	<div class="row">
-		<div id="sidebar-left" class="col-xs-2 col-sm-2">
-			<ul class="nav main-menu">
-				<li>
-					<a href="ajax/dashboard.html" class="active ajax-link">
-						<i class="fa fa-dashboard"></i>
-						<span class="hidden-xs">Dashboard</span>
-					</a>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-bar-chart-o"></i>
-						<span class="hidden-xs">Charts</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/charts_xcharts.html">xCharts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_flot.html">Flot Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_google.html">Google Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_morris.html">Morris Charts</a></li>
-						<li><a class="ajax-link" href="ajax/charts_coindesk.html">CoinDesk realtime</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-table"></i>
-						 <span class="hidden-xs">Tables</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/tables_simple.html">Simple Tables</a></li>
-						<li><a class="ajax-link" href="ajax/tables_datatables.html">Data Tables</a></li>
-						<li><a class="ajax-link" href="ajax/tables_beauty.html">Beauty Tables</a></li>
-					</ul>
-				</li>
-				<li class="dropdown">
-					<a href="#" class="dropdown-toggle">
-						<i class="fa fa-pencil-square-o"></i>
-						 <span class="hidden-xs">Forms</span>
-					</a>
-					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/forms_elements.html">Elements</a></li>
-						<li><a class="ajax-link" href="ajax/forms_layouts.html">Layouts</a></li>
-						<li><a class="ajax-link" href="ajax/forms_file_uploader.html">File Uploader</a></li>
-					</ul>
-				</li>
