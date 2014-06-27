@@ -5,7 +5,7 @@
 		<div class="row">
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
-			<li><a href="index.html"> Bienvenido</a></li>
+			<li><a href="index.php"> Bienvenido</a></li>
 			
 		</ol>
 	</div>

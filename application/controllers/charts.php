@@ -63,7 +63,9 @@ class Charts extends CI_Controller {
 		$this->highcharts->render_to('my_div'); // choose a specific div to render to graph
 		
 		$data['charts'] = $this->highcharts->render(); // we render js and div in same time
-		$this->load->view('charts', $data);
+		$this->load->view('header');	
+			$this->load->view('charts', $data);
+		$this->load->view('foorter');
 	}
 	
 	/**
@@ -85,7 +87,9 @@ class Charts extends CI_Controller {
 		$this->highcharts->set_serie_options(array('type' => 'spline'), 'Another description');
 		
 		$data['charts'] = $this->highcharts->render();
-		$this->load->view('charts', $data);
+		$this->load->view('header');	
+			$this->load->view('charts', $data);
+		$this->load->view('foorter');
 	}
 	
 	/**
@@ -119,7 +123,9 @@ class Charts extends CI_Controller {
 			->add(); // second graph
 		
 		$data['charts'] = $this->highcharts->render();
-		$this->load->view('charts', $data);
+		$this->load->view('header');	
+			$this->load->view('charts', $data);
+		$this->load->view('foorter');
 	}
 	
 	/**
@@ -136,7 +142,9 @@ class Charts extends CI_Controller {
 		
 		$data['array']  = $this->highcharts->get_array();
 		$data['json']   = $this->highcharts->get(); // false to keep data (dont clear current options)
-		$this->load->view('charts', $data);
+		$this->load->view('header');	
+			$this->load->view('charts', $data);
+		$this->load->view('foorter');
 
 	}
 	
@@ -167,7 +175,9 @@ class Charts extends CI_Controller {
 			->set_plotOptions($plot);
 		
 		$data['charts'] = $this->highcharts->render();
-		$this->load->view('charts', $data);
+		$this->load->view('header');	
+			$this->load->view('charts', $data);
+		$this->load->view('foorter');
 	}
 	
 	
