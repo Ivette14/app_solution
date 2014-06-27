@@ -52,7 +52,7 @@
                   </select>
                 </div>
 
-
+<input type="hidden" name="id_categoria" id="id_categoria" value="<?=  set_value('nombre_cate'); echo  @$_POST['nombre_cate'];?>">      
               <div class="form-group">
                 <label>Nombre de la Subcategoria</label>
                 <input name="nombre_subcate" class="form-control">

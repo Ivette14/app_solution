@@ -39,12 +39,12 @@ parent::__construct();
             $this->form_validation->set_message('required','El Campo <b>%s</b> Es Obligatorio');
             if ($this->form_validation->run() == TRUE)
             {
-                $id_subcategoria    = $this->input->post('id_subcategoria');  
+               
                 $id_categoria       = $this->input->post('id_categoria'); 
                 $nombre_subcate     = $this->input->post('nombre_subcate');
                 $descripcion        = $this->input->post('descripcion');
                 $ponderacion        = $this->input->post('ponderacion');
-                $this->crud_model_subcategoria->agregar_subcategoria($id_subcategoria,$id_categoria,$nombre_subcate,$descripcion,$ponderacion);               
+                $this->crud_model_subcategoria->agregar_subcategoria($id_categoria,$nombre_subcate,$descripcion,$ponderacion);               
          redirect('crud_subcategoria');               
             }
         }
