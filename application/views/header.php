@@ -154,8 +154,8 @@
 						 <span class="hidden-xs">Categorizar</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/tables_simple.html">Categorias</a></li>
-						<li><a class="ajax-link" href="ajax/tables_datatables.html">Nueva Catagoria</a></li>
+						<li><a class="" href="crud_categoria">Categorias</a></li>
+						<li><a class="" href="crud_subcategoria">Subcategorias</a></li>
 
 					</ul>
 				</li>
