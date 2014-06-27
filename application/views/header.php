@@ -58,8 +58,8 @@
 						  <i class="fa fa-bars"></i>
 						</a>
 						<div id="search">
-							<input type="text" placeholder="search"/>
-							<i class="fa fa-search"></i>
+							
+						
 						</div>
 					</div>
 					<div class="col-xs-4 col-sm-8 top-panel-right">
