@@ -20,6 +20,8 @@
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
 				<script src="http://getbootstrap.com/docs-assets/js/respond.min.js"></script>
 		<![endif]-->
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
 	</head>
 <body>
 <!--Start Header-->
@@ -163,7 +165,7 @@
 						 <span class="hidden-xs">Graficos De Casos</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/forms_elements.html">Historial e Casos</a></li>
+						<li><a class="" href="charts">Historial e Casos</a></li>
 						
 					</ul>
 				</li>

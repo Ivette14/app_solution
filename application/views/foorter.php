@@ -12,5 +12,7 @@
 <!-- All functions for this theme + document.ready processing -->
 <script src="<?php echo base_url().'seteo/js/devoops.js';?>"></script>
 
+
+
 </body>
 </html>
