@@ -6,6 +6,9 @@
 		<meta name="author" content="DevOOPS">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			 <base href="<?php echo base_url();  ?>">
+
+			 <link href="<?php echo base_url().'seteo/js/devoops.js'; ?>" type="javascript" >
+			 <link href="<?php echo base_url().'seteo/js/devoops.min.js'; ?>" type="javascript">
 		<link href="<?php echo base_url().'seteo/plugins/bootstrap/bootstrap.css'; ?>" rel="stylesheet">
 		<link href="<?php echo base_url().'seteo/plugins/jquery-ui/jquery-ui.min.css'; ?>" rel="stylesheet">
 		<link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -140,10 +143,11 @@
 						<span class="hidden-xs">Casos</span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a class="ajax-link" href="ajax/charts_xcharts.html">Nuevo Caso</a></li>
+					
+						<li><a  href="<?php echo base_url().'crud_caso'; ?>">Nuevo Caso</a></li>
 						<li><a class="ajax-link" href="ajax/charts_flot.html">Estados De Casos</a></li>
 						<li><a class="ajax-link" href="ajax/charts_google.html">Redirreccion de Casos</a></li>
-						<li><a class="ajax-link" href="ajax/charts_morris.html">Casos Sin Resolver</a></li>
+						<li><a href="<?php echo base_url().'crud_caso/responsable'; ?>">Casos Sin Responsable</a></li>
 					</ul>
 				</li>
 				<li class="dropdown">
