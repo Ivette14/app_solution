@@ -56,7 +56,7 @@
                                             <td><?= $casos->reporto_caso?></td> 
                                             <td><?= $casos->ubicacion?></td>
                                              <input  type="hidden" name="post" value="1" /> 
-                                            <td align="center"><button type="button" onclick=location="<?php echo base_url().'crud_caso'.$casos->id_caso; ?>" class="btn btn-primary"><i class=""></i>Asingar</button></td>
+                                            <td align="center"><button type="button" onclick=location="<?php echo base_url().'crud_caso/asignar_responsable'.$casos->id_caso; ?>" class="btn btn-primary"><i class=""></i>Asingar</button></td>
                                  </tr>
                                     <?php endforeach ;?>           
 					<!-- End: list_row -->
