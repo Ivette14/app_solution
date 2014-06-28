@@ -44,6 +44,44 @@
                 
               </fieldset>
 
+              <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <!-- /.panel-heading -->
+                      
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                    <thead>
+                                        <tr>
+                                           
+                                            <th>nombre categoria</th>
+                                            <th>Descripcion</th>
+                                            <th>Editar</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                            <?php foreach ($categorias as $categoria):?>
+                                            <tr>
+                                            
+                                            <td><?= $categoria->nombre_cate?></td>                                     
+                                            <td><?= $categoria->descripcion?></td> 
+                                            <td align="center"><button type="button" onclick=location="<?php echo base_url().'crud_categoria/editar/'.$categoria->id_categoria; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i>&nbsp;Editar</button></td>
+                                            </tr>
+                                            <?php endforeach ;?>
+                                    </thead>
+                                </table>
+                            </div>
+                            <!-- /.table-responsive -->                           
+                        </div>
+                        <!-- /.panel-body -->
+                     
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
             </form>
 
 

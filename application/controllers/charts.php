@@ -1,4 +1,4 @@
-<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+j<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Charts extends CI_Controller {
 
@@ -23,7 +23,7 @@ class Charts extends CI_Controller {
 		$this->load->library('highcharts');
 		
 		// some data series
-		$serie['data'] = array(20, 45, 60, 22, 6, 36);
+		$serie['data'] = array(10, 40, 20, 70, 50, 80);
 		
 		$data['charts'] = $this->highcharts->set_serie($serie)->render();
 		

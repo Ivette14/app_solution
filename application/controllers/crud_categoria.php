@@ -16,13 +16,11 @@ parent::__construct();
      
     public function index()
     {
-        //obtenemos todos los usuarios
-        //$cuenta = $this->crud_model_cuenta->get_cuentas();
-        //creamos una variable usuarios para pasarle a la vista
-        //$data['cuenta'] = $cuenta;
-        //cargamos nuestra vista
+        $categorias = $this->crud_model_categoria->tabla();
+        $data['categorias'] = $categorias;
+
         $this->load->view('header');    
-            $this->load->view('view_categoria');
+            $this->load->view('view_categoria',$data);
         $this->load->view('foorter');
     
     }
@@ -51,5 +49,44 @@ parent::__construct();
         $this->load->view('foorter');
       }  
 
-}
+
+      public function editar($id_categoria=0)
+    {
+        //verificamos si existe el id
+        $respuesta = $this->crud_model_categoria->get_categorias($id_categoria);
+        
+        //si nos retorna FALSE le mostramos la pag 404
+        if($respuesta==false)
+        show_404();
+        else
+        {
+            //Si existe el post para editar
+            if($this->input->post('post') && $this->input->post('post')==1)
+            {
+            $this->form_validation->set_rules('descripcion', 'Nombre de area', 'required|trim|xss_clean');
+            
+         
+             
+            $this->form_validation->set_message('required','El Campo <b>%s</b> Es Obligatorio');
+            if ($this->form_validation->run() == TRUE)
+            {
+                $descripcion        = $this->input->post('descripcion');
+                
+
+                $this->crud_model_categoria->actualizar_categoria ($id_categoria, $descripcion);
+
+                redirect('crud_categoria');               
+            }
+            }
+            //devolvemos los datos del usuario
+            $data['dato'] = $respuesta;
+            //cargamos la vista
+            $this->load->view('header');
+            $this->load->view('editar_categoria',$data);
+            $this->load->view('foorter');
+        }
+
+
+    }
+}  
 ?>

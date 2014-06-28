@@ -6,7 +6,7 @@
         parent::__construct();
     }
     //vamos a cargar todos los usuarios
-    public function get_categoria()
+    public function get_categorias()
     {
         $sql = $this->db->get('categoria');
         return $sql->result();
@@ -15,11 +15,28 @@
     public function agregar_categoria($id_categoria,$nombre_cate,$descripcion)
     {
         $this->db->insert('categoria',array(
-            'id_categoria'      => $id_categoria,
+            'id_categoria'   => $id_categoria,
             'nombre_cate'    => $nombre_cate,
-            'descripcion'   => $descripcion,
+            'descripcion'    => $descripcion,
             
         ));
+    }
+
+     public function actualizar_categoria($id_categoria, $categoria)
+    {
+        $this->db->where('id_categoria', $id_categoria);
+        $this->db->update('categoria',array(            
+            'descripcion'        => $descripcion
+            
+        ));
+    }
+
+    public function tabla()
+    {        
+       $query = $this->db->query('SELECT *
+                                    FROM categoria 
+                                     GROUP BY nombre_cate');
+       return $query->result();    
     }
 }
 
