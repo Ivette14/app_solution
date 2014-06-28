@@ -2,7 +2,7 @@
 		<div class="row">
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
-			<li><a href="<?php echo base_url().'crud_caso/responsable'; ?>">CASOS EN PROCESO</a></li>
+			<li><a href="<?php echo base_url().'crud_caso/casos_con_responsable'; ?>">CASOS EN PROCESO</a></li>
 		</ol>
 	</div>
 	</div>

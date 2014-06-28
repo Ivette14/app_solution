@@ -17,7 +17,7 @@
 	<tr>
 	<th width="215" height="37">
 		Nombre Del Caso:</th>
-		<th width="323"><input type="text" id="nombre_caso" name="nombre_caso" class="form-control" placeholder="Falla Ingreso De Datos"  value="<?= set_value('nombre_caso');?>"></th>
+		<th width="323"><input type="text" id="nombre_caso" name="nombre_caso" class="form-control" placeholder="Nombre del caso"  value="<?= set_value('nombre_caso');?>"></th>
 		</tr>
 	<tr>
 	  <th height="66">	
@@ -28,24 +28,31 @@
 		<tr>
 		<th height="61">
 		<label>Ubicacion Del Problema:</label></th>
-		<th><input type="text" class="form-control" id="ubicacion" name="ubicacion"  value="<?= set_value('ubicacion');?>" placeholder="Departamento de Recursos Humanos, Informatica etc."></th>
+		<th><input type="text" class="form-control" id="ubicacion" name="ubicacion"  value="<?= set_value('ubicacion');?>" placeholder="Ubicacion"></th>
 		</tr>
 	<tr>
 		<th height="55">
-		<label>Reporto El Caso</label></th>
+		<label>Reportó el Caso o problema</label></th>
 		<th><input type="text" class="form-control" id="reporto_caso" name="reporto_caso"  value="<?= set_value('reporto_caso');?>"placeholder="Reportador"></th>
 		</tr>
 		
 		
-		</TABLE>
+		
  
+
 		 <input  type="hidden" name="post" value="1" />      
 
-            <button type="submit" class="btn btn-primary" onclick="if(confirm('Esta a punto de agregar un caso'))
+<tr>
+<td>           <center> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="submit" class="btn btn-primary" onclick="if(confirm('Esta a punto de agregar un caso'))
 alert('ok!');
-else alert('ok')" >Guardar</button>
-			<button type="button"  class="btn btn-primary" value="Enviar" onClick="depreciacion()">Calcular</button>
-	</form>
+else alert('ok')" >Guardar</button>&nbsp;&nbsp;&nbsp;
+
+		<input onclick=location="<?php echo base_url().''; ?>" type="reset"  class="btn btn-primary" value="cancelar">
+</td></tr>
+			
+	</TABLE>
+
+</form>
 	</div>
 	</div>
 	</div>

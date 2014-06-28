@@ -1,9 +1,9 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>DevOOPS</title>
+		<title>App_Solution</title>
 		<meta name="description" content="description">
-		<meta name="author" content="DevOOPS">
+		<meta name="author" content="App_Solution">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 			 <base href="<?php echo base_url();  ?>">
 
@@ -83,11 +83,11 @@
 							<li class="dropdown">
 								<a href="#" class="dropdown-toggle account" data-toggle="dropdown">
 									<div class="avatar">
-										<img src="img/avatar.jpg" class="img-rounded" alt="avatar" />
+										<img src="seteo/img/images.jpg" class="img-rounded" alt="avatar" />
 									</div>
 									<i class="fa fa-angle-down pull-right"></i>
 									<div class="user-mini pull-right">
-										<span class="welcome">Welcome,</span>
+										<span class="welcome">Bienvenido,</span>
 										<span>MarioAbmi</span>
 									</div>
 								</a>
@@ -95,13 +95,13 @@
 									<li>
 										<a href="#">
 											<i class="fa fa-user"></i>
-											<span class="hidden-sm text">Profile</span>
+											<span class="hidden-sm text">Perfil</span>
 										</a>
 									</li>
 									<li>
 										<a href="ajax/page_messages.html" class="ajax-link">
 											<i class="fa fa-envelope"></i>
-											<span class="hidden-sm text">Messages</span>
+											<span class="hidden-sm text">Mensajes</span>
 										</a>
 									</li>
 									<li>
@@ -113,13 +113,13 @@
 									<li>
 										<a href="ajax/calendar.html" class="ajax-link">
 											<i class="fa fa-tasks"></i>
-											<span class="hidden-sm text">Tasks</span>
+											<span class="hidden-sm text">Tareas</span>
 										</a>
 									</li>
 									<li>
 										<a href="#">
 											<i class="fa fa-cog"></i>
-											<span class="hidden-sm text">Settings</span>
+											<span class="hidden-sm text">Configuraciones</span>
 										</a>
 									</li>
 									<li>
@@ -157,9 +157,10 @@
 					<ul class="dropdown-menu">
 					
 						<li><a  href="<?php echo base_url().'crud_caso'; ?>">Nuevo Caso</a></li>
-						<li><a href="<?php echo base_url().'crud_caso/casos_con_responsable'; ?>">Estados De Casos</a></li>
-						<li><a href="<?php echo base_url().'crud_caso/cerrar_casos'; ?>">Cerrar Casos</a></li>
+						<li><a href="<?php echo base_url().'crud_caso/casos_con_responsable'; ?>">Casos en Proceso</a></li>
 						<li><a href="<?php echo base_url().'crud_caso/responsable'; ?>">Casos Sin Responsable</a></li>
+						<li><a href="<?php echo base_url().'crud_caso/cerrar_casos'; ?>">Cerrar Casos</a></li>
+
 					</ul>
 				</li>
 				<li class="dropdown">
