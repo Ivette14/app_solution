@@ -3,7 +3,7 @@
 		<div class="row">
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
-			<li><a href="index.html"> Bienvenido</a></li>
+			<li><a href=""> Bienvenido</a></li>
 			
 		</ol>
 	</div>
@@ -11,7 +11,7 @@
 
 		<!--Start Content-->
 	<div class="well">
-	<h3 id="grid-options">Aqui Podria ir algun grafico o no se :)</h3>
+	<h3 id="grid-options">App Solution.</h3>
 
 	</div>
 	</div>
