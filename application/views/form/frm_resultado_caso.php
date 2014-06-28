@@ -11,16 +11,16 @@
 	<div class="well">
 	<div class="row show-grid-forms">
 <label>Codigo Caso</label>
-<input type="text" name="id_caso" id="caso" value="<? set_value('id_caso'); ?>">
+<input type="text" name="id_caso" id="caso" value="<?= set_value('id_caso'); ?>">
 <label>Nomobre Caso</label>
-<input type="text" name="reporto_caso" id="nombre_caso" value="<? set_value('nombre_caso'); ?>">
+<input type="text" name="reporto_caso" id="nombre_caso" value="<?= set_value('nombre_caso'); ?>">
 <label>Causa</label>
-<textarea name="causa" id="causa" value="<? set_value('causa'); ?>"></textarea> >
+<textarea name="causa" id="causa" value="<?= set_value('causa'); ?>"></textarea> >
 <label>Conclusion</label>
-<textarea name="conclusion" id="conclusion" value="<? set_value('causa'); ?>"></textarea> >
+<textarea name="conclusion" id="conclusion" value="<?= set_value('causa'); ?>"></textarea> >
 
 <label>Observaciones / Recomendaciones</label>
-<textarea name="observacion" id="observacion" value="<? set_value('causa'); ?>"></textarea> >
+<textarea name="observacion" id="observacion" value="<?= set_value('causa'); ?>"></textarea> >
 
 
 

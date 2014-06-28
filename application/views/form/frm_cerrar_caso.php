@@ -27,13 +27,13 @@
 
               <div class="form-group">
                 <label>Codigo</label>
-          <input type="text"  class="form-control" name="codigo" id="codigo" value="<? set_value('id_caso'); ?>">
+          <input type="text"  class="form-control" name="codigo" id="codigo" value="<?= set_value('id_caso'); ?>">
 
               </div>
 
                <div class="form-group">
                 <label>Nombre</label>
-                <input type="text"  class="form-control" name="nombre_caso" id="nombre_caso" value="<? set_value('nombre_caso'); ?>">
+                <input type="text"  class="form-control" name="nombre_caso" id="nombre_caso" value="<?= set_value('nombre_caso'); ?>">
 
              
                  </div>
@@ -41,14 +41,14 @@
 
                   <div class="form-group">
                 <label>Descripcion</label>
-                <textarea id="descripcion"  class="form-control" name="descripcion" id="descripcion" value="<? set_value('descripcion'); ?>">
+                <textarea id="descripcion"  class="form-control" name="descripcion" id="descripcion" value="<?= set_value('descripcion'); ?>">
 
              
                  </div>
 
                <div class="form-group">
                 <label>Fecha de Reporte</label>
-                <input type="text"  class="form-control" name="fecha_reporte" id="fecha_reporte" value="<? set_value('fecha_reporte'); ?>">
+                <input type="text"  class="form-control" name="fecha_reporte" id="fecha_reporte" value="<?= set_value('fecha_reporte'); ?>">
 
              
                  </div>
@@ -58,7 +58,7 @@
 
                <div class="form-group">
                 <label>Ubicacion</label>
-                <input type="text"  class="form-control" name="Ubicacion" id="ubicacion" value="<? set_value('ubicacion'); ?>">
+                <input type="text"  class="form-control" name="Ubicacion" id="ubicacion" value="<?= set_value('ubicacion'); ?>">
 
              
                  </div>
@@ -66,7 +66,7 @@
 
                <div class="form-group">
                 <label>Resporto Caso:</label>
-                <input type="text"  class="form-control" name="reporto_caso" id="reporto_caso" value="<? set_value('reporto_caso'); ?>">
+                <input type="text"  class="form-control" name="reporto_caso" id="reporto_caso" value="<?= set_value('reporto_caso'); ?>">
 
              
                  </div>
@@ -76,7 +76,7 @@
 
                <div class="form-group">
                 <label>Responsable de resolver caso</label>
-                <input type="text"  class="form-control" name="responsable" id="responsable" value="<? set_value('responsable'); ?>">
+                <input type="text"  class="form-control" name="responsable" id="responsable" value="<?= set_value('responsable'); ?>">
 
              
                  </div>
@@ -85,7 +85,7 @@
 
                <div class="form-group">
                 <label>Fecha de Asignacion</label>
-                <input type="text"  class="form-control" name="fecha_asignacion" id="fecha_asignacion" value="<? set_value('fecha_asignacion'); ?>">
+                <input type="text"  class="form-control" name="fecha_asignacion" id="fecha_asignacion" value="<?= set_value('fecha_asignacion'); ?>">
 
              
                  </div>
@@ -95,20 +95,20 @@
 
                <div class="form-group">
                 <label>Causa</label>
-                <input type="text"  class="form-control" name="causa" id="causa" value="<? set_value('causa'); ?>">
+                <input type="text"  class="form-control" name="causa" id="causa" value="<?= set_value('causa'); ?>">
                  </div>
 
 
                <div class="form-group">
                 <label>Conclusion</label>
-                <input type="text"  class="form-control" name="conclusion" id="conclusion" value="<? set_value('conclusion'); ?>">
+                <input type="text"  class="form-control" name="conclusion" id="conclusion" value="<?= set_value('conclusion'); ?>">
                  </div>
  
 
 
                <div class="form-group">
                 <label>Observacion</label>
-                <input type="text"  class="form-control" name="observacion" id="observacion" value="<? set_value('observacion'); ?>">
+                <input type="text"  class="form-control" name="observacion" id="observacion" value="<?= set_value('observacion'); ?>">
                  </div>
 
 
