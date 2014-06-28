@@ -129,7 +129,32 @@
                   
                    ?>   
 
-                  </select>
+                  </select>   
+                  <select required="required" autofocus="autofocus" value="<?= set_value('id_subcategoria');?>" class="form-control" name="nombre_subcate" id="nombre_subcate" onChange="submit()"> 
+  <option value='' selected> Seleccionar...</option>
+                  <?php 
+$id_categoria = @$_POST['nombre_cate'];
+$sql1="SELECT subcategoria.id_subcategoria, subcategoria.nombre_subcate
+ FROM subcategoria 
+Where id_categoria = $id_categoria;";
+$rec1=mysql_query($sql1);
+ while ($row=mysql_fetch_array($rec1))
+                   {
+            echo "<option value='".$row['id_subcategoria']."' ";
+                 if(@$_POST['nombre_subcate']==$row['id_subcategoria'])
+                  echo "SELECTED";
+                  echo ">";
+                  
+                  echo $row['nombre_subcate'];
+                  echo "</option>";
+                  
+                
+                } 
+
+?> 
+  </select>
+  <input type="hidden"  name="id_categoria" id="id_categoria" value="<?=  set_value('nombre_cate'); echo  @$_POST['nombre_cate'];?>">
+  <input type="hidden"  name="id_subcategoria" id="id_subcategoria" value="<?=  set_value('nombre_cate'); echo  @$_POST['nombre_subcate'];?>">
                 </div>
                        
 
