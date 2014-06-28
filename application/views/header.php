@@ -157,7 +157,7 @@
 					<ul class="dropdown-menu">
 					
 						<li><a  href="<?php echo base_url().'crud_caso'; ?>">Nuevo Caso</a></li>
-						<li><a class="ajax-link" href="ajax/charts_flot.html">Estados De Casos</a></li>
+						<li><a href="<?php echo base_url().'crud_caso/casos_con_responsable'; ?>">Estados De Casos</a></li>
 						<li><a class="ajax-link" href="ajax/charts_google.html">Redirreccion de Casos</a></li>
 						<li><a href="<?php echo base_url().'crud_caso/responsable'; ?>">Casos Sin Responsable</a></li>
 					</ul>

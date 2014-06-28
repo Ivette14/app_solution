@@ -43,6 +43,14 @@ public function nuevo_caso($nombre_caso,$reporto_caso,$descripcion,$fecha_report
          return $query->result();
         } 
 
+
+  public function get_casos_responsable()
+    {    
+        $query = $this->db->query('SELECT * from caso where estado = 1 and asignado = 1');
+         return $query->result();
+        } 
+
+
     public function get_caso($id_caso)
     {
         $sql = $this->db->get_where('caso',array('id_caso'=>$id_caso));
@@ -51,6 +59,22 @@ public function nuevo_caso($nombre_caso,$reporto_caso,$descripcion,$fecha_report
         else
         return false;  
     }
+
+public function inser_observaciones($id_caso,$causa,$conclusion,$observacion,$asignado)
+ {
+       $this->db->where('id_caso', $id_caso);
+        $this->db->update('seguimiento',array(            
+            'causa'        => $causa,
+            'conclusion'        => $conclusion,
+            'observacion'        => $observacion,          
+        ));
+
+        $this->db->where('id_caso', $id_caso);
+        $this->db->update('caso',array(            
+            'asignado'        => $asignado         
+        ));
+}
+
 }
 
     ?>
