@@ -22,7 +22,7 @@
         ));
     }
 
-     public function actualizar_categoria($id_categoria, $categoria)
+     public function actualizar_categoria($id_categoria, $descripcion)
     {
         $this->db->where('id_categoria', $id_categoria);
         $this->db->update('categoria',array(            
@@ -30,6 +30,17 @@
             
         ));
     }
+
+    public function get_act($id_categoria)
+    {
+        $sql = $this->db->get_where('categoria',array('id_categoria'=>$id_categoria));
+        if($sql->num_rows()==1)
+        return $sql->row_array();
+        else
+        return false;
+    }
+      
+      
 
     public function tabla()
     {        

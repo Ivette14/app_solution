@@ -3,7 +3,7 @@
     <div class="row">
   <div id="breadcrumb" class="col-md-12">
     <ol class="breadcrumb">
-      <li><a href="index.html"> <h4> Editar Descripcion Categoria</h4></a></li>
+      <li><a href="index.html"> <h4> Editar Categoria</h4></a></li>
       
     </ol>
   </div>
@@ -22,11 +22,16 @@
 
             <form method="post" role="form">
 
-              <div class="form-group">
-                <label>Descripcion</label>
-                <input name="descripcion" class="form-control" value="<?= set_value('descripcion',$dato['descripcion']);?>">
+             <div class="form-group">
+                <label>Categoria</label>
+                <input name="nombre_cate" class="form-control" value="<?= set_value('nombre_cate',$dato['nombre_cate']); ?>">
               </div>
-             
+               <div class="form-group">
+                <label>Descripcion</label>
+                <input name="descripcion" class="form-control" value="<?= set_value('descripcion',$dato['descripcion']); ?>">
+              </div>
+
+                            
               <div class="form-group">
                 <input type="hidden" name="post" value="1" />                
                 <button type="submit" value="editar" class="btn btn-primary">Guardar</button>
@@ -38,11 +43,9 @@
 
            </div>
         </div><!-- /.row -->
-      <?= validation_errors(); ?>
-
-
-
-        
+      <?= validation_errors(); ?>        
+</div>
+  </div>
 
        <script type="text/javascript">
 // Run Select2 on element

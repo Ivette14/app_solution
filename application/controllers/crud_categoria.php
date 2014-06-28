@@ -20,7 +20,7 @@ parent::__construct();
         $data['categorias'] = $categorias;
 
         $this->load->view('header');    
-            $this->load->view('view_categoria',$data);
+            $this->load->view('form/view_categoria',$data);
         $this->load->view('foorter');
     
     }
@@ -45,16 +45,16 @@ parent::__construct();
         }
            //cargamos nuestra vista
         $this->load->view('header');
-        $this->load->view('view_categoria');
+        $this->load->view('form/view_categoria');
         $this->load->view('foorter');
       }  
 
 
-      public function editar($id_categoria=0)
+    public function editar($id_categoria=0)
     {
         //verificamos si existe el id
-        $respuesta = $this->crud_model_categoria->get_categorias($id_categoria);
-        
+        $respuesta = $this->crud_model_categoria->get_act($id_categoria);
+        //$datos['sucursal'] = $this->crud_model_empleado->sucur();
         //si nos retorna FALSE le mostramos la pag 404
         if($respuesta==false)
         show_404();
@@ -63,30 +63,32 @@ parent::__construct();
             //Si existe el post para editar
             if($this->input->post('post') && $this->input->post('post')==1)
             {
-            $this->form_validation->set_rules('descripcion', 'Nombre de area', 'required|trim|xss_clean');
+           ;            
+            $this->form_validation->set_rules('nombre_cate', 'Categoria', 'required|trim|xss_clean');
+            $this->form_validation->set_rules('descripcion', 'Descripcion', 'required|trim|xss_clean');
             
-         
              
             $this->form_validation->set_message('required','El Campo <b>%s</b> Es Obligatorio');
+            $this->form_validation->set_message('numeric','El Campo <b>%s</b> Solo Acepta Números');
             if ($this->form_validation->run() == TRUE)
             {
-                $descripcion        = $this->input->post('descripcion');
-                
-
-                $this->crud_model_categoria->actualizar_categoria ($id_categoria, $descripcion);
+               
+                $nombre_subcate = $this->input->post('nombre_cate');
+                $descripcion  = $this->input->post('descripcion');                               
+                $this->crud_model_subcategoria->actualizar_subcategoria($id_categoria, $nombre_cate, $descripcion);
+ //$this->crud_model_empleado->actualizar_empleado($id_empleado, $codigo_empleado, $id_sucursal, $nombre_empleado, $direccion_empleado, $telefono_empleado, $email_empleado);
 
                 redirect('crud_categoria');               
             }
+
             }
             //devolvemos los datos del usuario
             $data['dato'] = $respuesta;
             //cargamos la vista
             $this->load->view('header');
-            $this->load->view('editar_categoria',$data);
+            $this->load->view('form/frm_editar_categoria',$data);
             $this->load->view('foorter');
         }
-
-
     }
-}  
+}
 ?>
