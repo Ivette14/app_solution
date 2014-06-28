@@ -23,8 +23,18 @@
 				<script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
 				<script src="http://getbootstrap.com/docs-assets/js/respond.min.js"></script>
 		<![endif]-->
+
+
+		
+	
 		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-	<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript" src="http://www.google.com/jsapi"></script>
+		<script type="text/javascript">
+		google.load("jquery", "1.4.4");
+		</script>
+		<script type="text/javascript" src="http://code.highcharts.com/highcharts.js"></script>
+
+
 	</head>
 <body>
 <!--Start Header-->
