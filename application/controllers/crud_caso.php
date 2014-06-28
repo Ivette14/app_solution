@@ -208,5 +208,60 @@ $respuesta = $this->crud_model_caso->get_caso($id_caso);
 
 }
 }
+public function cerrar_casos()
+{
+	$respuesta = $this->crud_model_caso->get_cerrar();
+ $dato['caso'] = $respuesta;
+            //cargamos la vista
+            $this->load->view('header');
+            $this->load->view('form/frm_cerrar_caso_grid',$dato);
+            $this->load->view('foorter');
+
+}
+public function cerrar($id_caso=0)
+{
+
+$respuesta = $this->crud_model_caso->get_caso($id_caso);
+$respuesta1 = $this->crud_model_caso->get_seguimiento($id_caso);
+        //si nos retorna FALSE le mostramos la pag 404
+        if($respuesta==false)
+        show_404();
+        else
+        {
+            //Si existe el post para editar
+           if($this->input->post('post') && $this->input->post('post')==1)
+            {
+            $this->form_validation->set_rules('id_caso', 'Codigo Caso', 'required|trim|xss_clean');
+            $this->form_validation->set_rules('nombre_caso', 'Nombre caso', 'required|trim|xss_clean');
+            $this->form_validation->set_rules('causa', 'Causa', 'required|trim|xss_clean');
+            $this->form_validation->set_rules('conclusion', 'conclusion', 'required|trim|xss_clean');
+            $this->form_validation->set_rules('observacion', 'observaciones', 'required|trim|xss_clean');
+
+
+            $this->form_validation->set_message('required','El Campo <b>%s</b> Es Obligatorio');
+                if ($this->form_validation->run() == TRUE)
+                {
+                $id_caso             = $this->input->post('id_caso');
+                $nombre_caso         = $this->input->post('nombre_caso');
+                $causa               = $this->input->post('causa');
+                $conclusion          = $this->input->post('conclusion');
+                $observacion         = $this->input->post('observacion');
+                $asignado = 2;
+  
+
+     $this->crud_model_caso->inser_observaciones($id_caso,$causa,$conclusion,$observacion,$asignado);
+                    //redireccionamos al controlador CRUD
+                    redirect('crud_caso');               
+                }
+            }
+            //devolvemos los datos del usuario
+            $dato['dato'] = $respuesta;
+            $dato1['dato1'] = $respuesta1;
+
+	  $this->load->view('header',$dato1);
+            $this->load->view('form/frm_cerrar_caso',$dato);
+            $this->load->view('foorter');
+}
+}
 }
 

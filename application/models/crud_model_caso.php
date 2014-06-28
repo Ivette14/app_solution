@@ -60,6 +60,15 @@ public function nuevo_caso($nombre_caso,$reporto_caso,$descripcion,$fecha_report
         return false;  
     }
 
+    public function get_seguimiento($id_caso)
+    {
+        $sql = $this->db->get_where('seguimiento',array('id_caso'=>$id_caso));
+        if($sql->num_rows()==1)
+        return $sql->row_array();
+        else
+        return false;
+    }
+
 public function inser_observaciones($id_caso,$causa,$conclusion,$observacion,$asignado)
  {
        $this->db->where('id_caso', $id_caso);
@@ -75,6 +84,19 @@ public function inser_observaciones($id_caso,$causa,$conclusion,$observacion,$as
         ));
 }
 
+public function get_cerrar()
+{
+    $query = $this->db->query('SELECT 
+        caso.id_caso, 
+        caso.nombre_caso,
+        seguimiento.causa, 
+        seguimiento.conclusion, 
+        seguimiento.observacion
+     FROM  caso
+  INNER JOIN seguimiento ON seguimiento.id_caso = caso.id_caso 
+     WHERE caso.asignado = 2;');
+         return $query->result();
+}
 }
 
     ?>
