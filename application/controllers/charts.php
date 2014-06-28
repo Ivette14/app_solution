@@ -21,9 +21,11 @@ class Charts extends CI_Controller {
 	{
 		// simple highcharts example
 		$this->load->library('highcharts');
+
+		
 		
 		// some data series
-		$serie['data'] = array(10, 40, 20, 70, 50, 80);
+		$serie['data'] = array(10, 40, 30, 70, 50, 80);
 		
 		$data['charts'] = $this->highcharts->set_serie($serie)->render();
 		

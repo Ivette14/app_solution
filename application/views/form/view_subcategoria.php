@@ -64,8 +64,15 @@
               </div>
 
               <div class="form-group">
-                <label>Ponderacion</label>
-                <input name="ponderacion" class="form-control">
+                  <label for="disabledSelect">Ponderacion</label>
+                  <select id="disabledSelect" name="ponderacion" class="form-control" value="<?= set_value('ponderacion');?>">
+                  <option>Seleccione la ponderacion</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
+                  </select>
               </div>
  
 
