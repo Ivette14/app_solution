@@ -2,7 +2,7 @@
 		<div class="row">
 	<div id="breadcrumb" class="col-md-12">
 		<ol class="breadcrumb">
-			<li><a href="<?php echo base_url().'crud_caso/responsable'; ?>">ASIGNACION</a></li>
+			<li><a href="<?php echo base_url().'crud_caso/responsable'; ?>">CASOS EN PROCESO</a></li>
 		</ol>
 	</div>
 	</div>
@@ -12,7 +12,7 @@
 			<div class="box-header">
 				<div class="box-name">
 					<i class="fa fa-usd"></i>
-					<span>Casos sin asignar responsable</span>
+					<span>Casos en proceso</span>
 				</div>
 				<div class="box-icons">
 					<a class="collapse-link">
@@ -41,9 +41,9 @@
 							<th>Codigo </th>
 							<th>Caso</th>
 							<th>Descripcion</th>
-							<th>Reportero</th>
+							<th>Reportó</th>
 							<th>Ubicacion</th>
-							<th>A/R</th>
+							<th>Observaciones</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -55,7 +55,7 @@
                                             <td><?= $caso->descripcion?></td> 
                                             <td><?= $caso->reporto_caso?></td> 
                                             <td><?= $caso->ubicacion?></td>
-                                    <td align="center"><button type="button" onclick=location="<?php echo base_url().'crud_caso/asignar_responsable/'.$caso->id_caso; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i>&nbsp;Asignar</button></td>
+                                    <td align="center"><button type="button" onclick=location="<?php echo base_url().'crud_caso/observaciones/'.$caso->id_caso; ?>" class="btn btn-primary"><i class="glyphicon glyphicon-pencil"></i>&nbsp;Observaciones</button></td>
                                  </tr>
                                     <?php endforeach ;?>           
 					<!-- End: list_row -->
@@ -67,7 +67,7 @@
 							<th>Descripcion</th>
 							<th>Reportero</th>
 							<th>Ubicacion</th>
-							<th>A/R</th>
+							<th>Observaciones</th>
 						</tr>
 					</tfoot>
 				</table>
