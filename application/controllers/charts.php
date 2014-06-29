@@ -172,6 +172,7 @@ class Charts extends CI_Controller {
 		
 		$this->highcharts
 			->set_type('pie')
+			->set_title('Resultados')
 			->set_serie($serie)
 			->set_tooltip($tool)
 			->set_plotOptions($plot);
