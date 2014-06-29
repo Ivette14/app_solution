@@ -161,9 +161,9 @@ class Charts extends CI_Controller {
 	{
 		$this->load->library('highcharts');
 		$serie['data']	= array(
-			array('value one', 20), 
-			array('value two', 45), 
-			array('other value', 60)
+			array('Ponderizacion Leve (1-2)', 60), 
+			array('Ponderizacion Moderada (3-4)', 30), 
+			array('Ponderizacion Grave (5)', 10)
 		);
 		$callback = "function() { return '<b>'+ this.point.name +'</b>: '+ this.y +' %'}";
 		
@@ -177,6 +177,7 @@ class Charts extends CI_Controller {
 			->set_plotOptions($plot);
 		
 		$data['charts'] = $this->highcharts->render();
+
 		$this->load->view('header');	
 			$this->load->view('charts', $data);
 		$this->load->view('foorter');

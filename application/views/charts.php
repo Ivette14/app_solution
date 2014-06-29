@@ -11,16 +11,7 @@
 	</div>
 	</div>
 
-		<div id="menu" class="left">
-		<ol>
-			<li><?php echo anchor($home, 'Grafica Lineal')?></li>
-			<li><?php echo anchor($home.'categories', 'Grafica de Barras')?></li>
-		<!--	<li><?php echo anchor($home.'template', '')?></li> -->
-			<li><?php echo anchor($home.'active_record', 'multiples chart and Database result')?></li>
-			<li><?php echo anchor($home.'pie', 'Grafica de Pastel')?></li>
-			<li><?php echo anchor($home.'data_get', 'outputing json or array')?></li>
-		</ol>
-	</div>
+		
 
 	<div id="g_render"  class="left">
 		<?php if (isset($charts)) echo $charts; ?>
@@ -31,6 +22,17 @@
 			<h3>Array output: associative array with global options and 'local options' (for each graph)</h3>
 			<pre><?php echo print_r($array); ?></pre>
 		<?php endif; ?>
+	</div>
+	<br>
+	<div id="menu" class="left">
+		<ol>
+			<li><?php echo anchor($home, 'Grafica Lineal')?></li>
+			<li><?php echo anchor($home.'categories', 'Grafica de Barras')?></li>
+		<!--	<li><?php echo anchor($home.'template', '')?></li> -->
+			<li><?php echo anchor($home.'active_record', 'multiples chart and Database result')?></li>
+			<li><?php echo anchor($home.'pie', 'Grafica de Pastel')?></li>
+			<li><?php echo anchor($home.'data_get', 'outputing json or array')?></li>
+		</ol>
 	</div>
 
 
