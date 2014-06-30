@@ -83,6 +83,11 @@ public function inser_observaciones($id_caso,$causa,$conclusion,$observacion,$es
             'estado'        => $estado        
         ));
 }
+ function procedimiento1()
+{
+$query =  $this->db->query('call "prueba"')
+
+}
 
 public function get_cerrar()
 {
