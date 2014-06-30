@@ -147,10 +147,10 @@ function asignar_responsable($id_caso=0)
                 $causa               = $this->input->post('causa');
                 $conclusion          = $this->input->post('conclusion');
                 $observacion         = $this->input->post('observacion');
-                $asignado = 2;
+                $estado = 2;
   
 
-     $this->crud_model_caso->inser_observaciones($id_caso,$causa,$conclusion,$observacion,$asignado);
+     $this->crud_model_caso->inser_observaciones($id_caso,$causa,$conclusion,$observacion,$estado);
                     //redireccionamos al controlador CRUD
                     redirect('crud_caso');               
                 }
@@ -232,24 +232,25 @@ $respuesta1 = $this->crud_model_caso->get_seguimiento($id_caso);
            if($this->input->post('post') && $this->input->post('post')==1)
             {
             $this->form_validation->set_rules('id_caso', 'Codigo Caso', 'required|trim|xss_clean');
-            $this->form_validation->set_rules('nombre_caso', 'Nombre caso', 'required|trim|xss_clean');
-            $this->form_validation->set_rules('causa', 'Causa', 'required|trim|xss_clean');
-            $this->form_validation->set_rules('conclusion', 'conclusion', 'required|trim|xss_clean');
-            $this->form_validation->set_rules('observacion', 'observaciones', 'required|trim|xss_clean');
+            $this->form_validation->set_rules('id_subcategoria', 'Nombre caso', 'required|trim|xss_clean');
 
 
             $this->form_validation->set_message('required','El Campo <b>%s</b> Es Obligatorio');
                 if ($this->form_validation->run() == TRUE)
                 {
-                $id_caso             = $this->input->post('id_caso');
-                $nombre_caso         = $this->input->post('nombre_caso');
-                $causa               = $this->input->post('causa');
-                $conclusion          = $this->input->post('conclusion');
-                $observacion         = $this->input->post('observacion');
-                $asignado = 2;
+                $id_caso                 = $this->input->post('id_caso');
+                $id_subcategoria         = $this->input->post('id_subcategoria');
+                  $timestamp = now();
+        $timezone = 'UM8';
+        $daylight_saving = FALSE;
+
+        $now = gmt_to_local($timestamp, $timezone, $daylight_saving);
+        $datestring = "%Y-%m-%d %h:%i:%s";
+          $fecha_resolucion         = $this->now = mdate($datestring, $now);
+                $estado = 0;
   
 
-     $this->crud_model_caso->inser_observaciones($id_caso,$causa,$conclusion,$observacion,$asignado);
+     $this->crud_model_caso->cerrar($id_caso,$id_subcategoria,$fecha_resolucion,$estado);
                     //redireccionamos al controlador CRUD
                     redirect('crud_caso');               
                 }

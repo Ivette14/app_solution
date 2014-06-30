@@ -69,7 +69,7 @@ public function nuevo_caso($nombre_caso,$reporto_caso,$descripcion,$fecha_report
         return false;
     }
 
-public function inser_observaciones($id_caso,$causa,$conclusion,$observacion,$asignado)
+public function inser_observaciones($id_caso,$causa,$conclusion,$observacion,$estado)
  {
        $this->db->where('id_caso', $id_caso);
         $this->db->update('seguimiento',array(            
@@ -80,7 +80,7 @@ public function inser_observaciones($id_caso,$causa,$conclusion,$observacion,$as
 
         $this->db->where('id_caso', $id_caso);
         $this->db->update('caso',array(            
-            'asignado'        => $asignado         
+            'estado'        => $estado        
         ));
 }
 
@@ -94,9 +94,25 @@ public function get_cerrar()
         seguimiento.observacion
      FROM  caso
   INNER JOIN seguimiento ON seguimiento.id_caso = caso.id_caso 
-     WHERE caso.asignado = 2;');
+     WHERE caso.estado =2 ;');
          return $query->result();
 }
+
+public function cerrar($id_caso,$id_subcategoria,$fecha_resolucion,$estado)
+{
+   $this->db->insert('caso_cate', array(
+        'id_caso'                   =>$id_caso,
+        'id_subcategoria'            =>$id_subcategoria,
+        'fecha_resolucion'            =>$fecha_resolucion
+
+        ));
+   $this->db->where('id_caso', $id_caso);
+        $this->db->update('caso',array(            
+            'estado'        => $estado         
+        ));
+
+}
+
 }
 
     ?>

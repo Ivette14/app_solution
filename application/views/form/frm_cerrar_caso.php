@@ -160,7 +160,7 @@ $rec1=mysql_query($sql1);
 
               <div class="form-group">
                 <input  type="hidden" name="post" value="1" />                
-                 <button type="submit" class="btn btn-primary">Guardar</button>
+                 <button type="submit" class="btn btn-primary">Cerrar Caso</button>
                 <button type="button" onclick=location="<?php echo base_url().'crud_caso/cerrar_casos'; ?>" class="btn btn-primary">Cancelar</button>
               </div>   
                 
