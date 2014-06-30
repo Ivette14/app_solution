@@ -22,7 +22,7 @@
                                     <thead>
                                         <tr>
                                            
-                                            <th>Nombre Categoria</th>
+                                            <th>Nombre CategoriaSS</th>
                                             <th>Descripcion</th>
                                             </tr>
                                     </thead>

@@ -160,6 +160,7 @@
 						<li><a href="<?php echo base_url().'crud_caso/responsable'; ?>">Casos Sin Responsable</a></li>
 						<li><a href="<?php echo base_url().'crud_caso/casos_con_responsable'; ?>">Casos en Proceso</a></li>
 						<li><a href="<?php echo base_url().'crud_caso/cerrar_casos'; ?>">Cerrar Casos</a></li>
+						<li><a href="<?php echo base_url().'crud_historial'; ?>">Historial</a></li>
 
 					</ul>
 				</li>
